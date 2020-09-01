@@ -4,6 +4,7 @@ import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import dailymotion from '../apis/dailymotion';
+import vimeo from '../apis/vimeo';
 
 class App extends React.Component {
 
@@ -29,7 +30,10 @@ class App extends React.Component {
                 selectedVideo: null,
                 search_engine: searcher
             });
-        } 
+        } else if (searcher === 'vimeo') {
+                const response = await vimeo.get(`?query=${term}`)
+                console.log(response);
+        }
         };
 
     onVideoSelect = video => {
