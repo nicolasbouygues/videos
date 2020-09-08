@@ -21,7 +21,16 @@ const VideoItem = ({ video, onVideoSelect, searcher }) => {
             </div>
         </div>
         </div>
-    }
+    } else if (searcher === 'both') {
+        return <div onClick={() => onVideoSelect(video, searcher)} className="video-item item">
+        <img className="ui image" src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} id={video.id.videoId} />
+        <div className="content">
+            <div className="header">
+                {video.snippet.title}
+            </div>
+        </div>
+        </div>
+    };
     return <div>ok</div>
 };
 

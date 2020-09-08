@@ -30,7 +30,6 @@ class SearchBar extends React.Component {
                         <select name="" id="video_select" onChange={this.onCheckboxSelected}>
                             <option value="youtube">YouTube</option>
                             <option value="dailymotion">Dailymotion</option>
-                            <option value="vimeo">Vimeo</option>
                         </select>
                     </div>
                 </form>

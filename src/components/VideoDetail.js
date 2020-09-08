@@ -1,12 +1,11 @@
 import React from 'react'
 
 const VideoDetail = ({ video, searcher }) => {
-    if (!video) {
-        return <div>Please search for a video !</div>
+    if (!video && searcher) {
+        return <div>Please select a video !</div>
     }
     if (!searcher) {
-        console.log(searcher);
-        return <div>Please search!</div>
+        return <div>Please search for a video!</div>
     } else if (searcher === 'youtube') {
         const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
         return (
