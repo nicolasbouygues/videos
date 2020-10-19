@@ -13,11 +13,14 @@
     "react-scripts": "3.4.3",
     "vimeo": "^2.1.1"
   },
-  "scripts": {
+"scripts": {
+    "dev": "react-scripts start",
+    "deploy": "serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
